@@ -1,21 +1,29 @@
+/*
+Ganz am Anfang der Datei steht ein YAML-Header (auch „Front Matter“ genannt).
+In diesem werden der Titel des zu erstellenden Videos, der Autor und der Pfad zur
+Style-Datei festgelegt.
+
+- **title**: Gibt dem gesamten Video einen Titel.
+- **author**: Name des Erstellers.
+- **style**: Verweist auf eine externe Style-Datei in CSS.
+*/
 ---
-title: "Lerntechniken für den Flipped Classroom"
-author: "Prof. Dr. Peter Braun"  
+title: "Einführung in die Video Markdown Sprache"
+author: "Jonas Eck"  
 style: "style.css"  
 ---
 
 
-# Scene: Lernziele
 
-## Slide (title="Lernziele", lang="DE")
+# Scene: Grundlegende Elemente
 
+## Slide (title="Grundlegende Elemente", lang="DE")
 - Sie kennen die Flipped Classroom Methodik  
 - Sie beschreiben die drei Lernphasen  
 - Sie verstehen Ihre Rolle im Lernprozess  
 - Sie erstellen Lern- und Zeitpläne  
 
 ## Teleprompt (title="Lernziele", lang="DE")
-
 Liebe Studierende, Herzlich Willkommen zu diesem kurzen Video. Bevor wir so richtig
 mit dem Stoff anfangen, möchte ich Ihnen in diesem Video die Methode vorstellen, mit
 der sie in diesem Semester und in diesem Modul arbeiten werden. Sie nennt sich Flipped
@@ -50,7 +58,7 @@ zu machen.
 - Performance monitoring in the form of an exam
 
 ## Teleprompt (title="Ein Modul in einem Studium", lang="DE")
-Begriffsklärung ist oft der erste Schritt, um ein neues Thema zu verstehen. Daher beginnen wir 
+Begriffsklärung ist oft der erste Schritt, um ein neues Thema zu verstehen. Daher beginnen wir  
 mit der Definition des Begriffs "Modul" im Kontext eines Studienganges. Ein Modul können Sie 
 als einzelnes, abgeschlossenes Thema innerhalb Ihres Studienganges betrachten. Es ist gestaltet 
 mit dem Ziel, Wissen und Erfahrungen zu spezifischen Inhalten oder Themen anzubieten sowie den 
@@ -125,7 +133,6 @@ Verständnis zu beschäftigen.
 
 ### Button (name="button1", label="nächste Szene", action="scene: Typische Verteilung von Präsenz- und Selbstlernzeit") 
 
-
 ## Teleprompt (title="Aufwand für ein Modul", lang="DE")
 Ein wichtiger Punkt bei der Beschreibung eines Moduls ist der Arbeitsaufwand oder auf
 Englisch der „Workload“ für die Studierenden. Das wird in Europa mehr oder weniger einheitlich
@@ -177,7 +184,7 @@ und Studienplänen sehen. SWS steht für Semesterwochenstunden. Bei der Präsenz
 schenken wir Ihnen übrigens pro Stunde 15 Minuten. Also für eine Stunde Arbeit im
 Sinne des Workloads arbeiten wir im Hörsaal nur 45 Minuten. // Aber die Präsenzzeit
 ist nur ein Teil Ihrer Arbeitslast. Der andere wichtige Teil ist das Selbststudium. Dies
-umfasst die verbleibenden 90 Stunden in einem Modul. [!start:quiz1] Im Selbststudium bearbeiten
+umfasst die verbleibenden 90 Stunden in einem Modul. [!quiz:quiz1] Im Selbststudium bearbeiten
 Sie Lernmaterialien, bereiten sich auf Prüfungen vor, üben, wiederholen und setzen das
 in den Vorlesungen oder Seminaren Gelernte um. Das Verhältnis von 60 zu 90 mag auf
 den ersten Blick vielleicht seltsam erscheinen, aber es verdeutlicht wirklich die Bedeutung
@@ -222,16 +229,15 @@ Ihren ganz individuellen Fragen zu beschäftigen.
 
 ## Slide (title="Vorteile des Flipped Classrooms", lang="DE")
 ### column (width=50)
-[!bullet0 - **Sie können den Stoff in Ihrem Tempo lernen**]
-[!bullet1
-- Sie haben eine Woche Zeit für die Vorbereitung
--  Sie kommen vorbereitet in die Präsenz-Übung
-]
+[!bullet0] - **Sie können den Stoff in Ihrem Tempo lernen**
+[!bullet1] - Sie haben eine Woche Zeit für die Vorbereitung
+[!bullet1] -  Sie kommen vorbereitet in die Präsenz-Übung
+
 
 ### column (width=50)
-[!bullet2 - Sie stellen (wahrscheinlich) bessere Fragen]
-[!bullet3 - Sie können die Übungsaufgabe besser bearbeiten]
-[!bullet4 - **Sie übernehmen Verantwortung für Ihren Lernerfolg**]
+[!bullet2] - Sie stellen (wahrscheinlich) bessere Fragen
+[!bullet3] - Sie können die Übungsaufgabe besser bearbeiten
+[!bullet4] - **Sie übernehmen Verantwortung für Ihren Lernerfolg**
 
 ## Teleprompt (title="Vorteile des Flipped Classrooms", lang="DE")
 Aber auch für Sie hat der Flipped Classroom Vorteile.[!show:bullet0] Der Hauptvorteil ist, dass diese Methode ermöglicht, dass Sie den Stoff in Ihrem eigenen Tempo bearbeiten. Sie sind
