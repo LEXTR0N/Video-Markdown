@@ -1,0 +1,65 @@
+/* src/app/app.component.scss */
+$app-bg: #f5f5f5;
+$primary-color: #6200ea;
+$button-bg: #fff;
+$button-hover: #e0e0e0;
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $app-bg;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.app-header {
+  margin-bottom: 20px;
+  
+  h1 {
+    font-size: 2rem;
+    color: $primary-color;
+    margin: 0;
+  }
+}
+
+.scene-selector {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+
+  .mat-button {
+    padding: 10px 20px;
+    background-color: $button-bg;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $button-hover;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.5);
+    }
+  }
+}
+
+/* Der Vorschaubereich füllt den restlichen Raum */
+.preview-wrapper {
+  flex: 1; /* Nimmt den restlichen vertikalen Platz ein */
+  width: 100%;
+  max-width: 1200px; /* Maximale Breite, passt sich aber responsiv an */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,48 @@
+// src/app/scene-preview/scene-preview.component.scss
+
+@use '../../../assets/styles.scss' as *;  // Nutzt die neue Sass-Syntax, damit alle Variablen und Klassen verfügbar sind
+
+.scene-container {
+  /* Der Container passt sich an die Bildschirmgröße an:
+     - Die Breite ist der kleinere Wert aus 100vw oder (100vh * 16/9).
+     - Die Höhe ist der kleinere Wert aus 100vh oder (100vw * 9/16).
+     Somit bleibt das Verhältnis immer 16:9 und der Container wächst maximal, ohne den Viewport zu sprengen.
+  */
+  width: min(100vw, calc(100vh * (16 / 9)));
+  height: min(100vh, calc(100vw * (9 / 16)));
+  aspect-ratio: 16 / 9; /* Für Browser, die aspect-ratio unterstützen */
+  margin: auto;
+  border: 2px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Beispielhafte Stildefinitionen für die Scene-Elemente */
+.scene-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px dashed #666;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.scene-title {
+  background-color: rgba(255, 200, 200, 0.5);
+}
+.scene-slide {
+  background-color: rgba(200, 255, 200, 0.5);
+}
+.scene-screencast {
+  background-color: rgba(200, 200, 255, 0.5);
+}
+.scene-speaker {
+  background-color: rgba(255, 255, 200, 0.5);
+}

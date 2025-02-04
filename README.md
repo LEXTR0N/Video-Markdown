@@ -2,24 +2,6 @@
 
 Diese Sprache wurde entwickelt, um **Lehrvideos** in einer strukturierten Art Drehbuch zu beschreiben. Das Ziel ist, dass anschließend ein **Python-Skript** diese Datei einliest und Sie bei der Erstellung von Lehrvideos unterstützt.
 
-## Inhaltsübersicht
-
-1. [Aufbau der DSL](#aufbau-der-dsl)
-2. [YAML-Header](#yaml-header)
-3. [Strukturierung mit Szenen](#strukturierung-mit-szenen)
-4. [Inhalte in Szenen](#inhalte-in-szenen)
-   - [Slides](#slides)
-   - [Teleprompt](#teleprompt)
-   - [Quiz](#quiz)
-   - [Screencast](#screencast)
-   - [Code Snippet](#code-snippet)
-   - [Video](#video)
-   - [Image](#image)
-5. [Buttons und Inline-Kommandos](#buttons-und-inline-kommandos)
-6. [Mehrsprachige Inhalte](#mehrsprachige-inhalte)
-7. [Beispiel-Workflow](#beispiel-workflow)
-8. [Tipps & Tricks](#tipps--tricks)
-
 ---
 
 ## Aufbau der DSL
@@ -66,7 +48,7 @@ Jedes Lehrvideo wird in **mehrere Szenen** aufgeteilt. Eine Szene entspricht ein
 
 Innerhalb einer Szene können Sie folgende Elemente platzieren:
 
-### Slides
+### Slide
 
 Mit `## Slide (titel="...", lang="DE")` definieren Sie Folieninhalte (z. B. Stichpunkte). Beispiel:
 
@@ -79,7 +61,7 @@ Mit `## Slide (titel="...", lang="DE")` definieren Sie Folieninhalte (z. B. Stic
 
 **Attribute**:
 
-- `titel="..."`: Titel der Folie.
+- `titel="..."`: Titel der Folie, welcher a
 - `lang="DE"` (oder `"EN"`): Sprachangabe.
 
 **Wichtig**: In jeder Szene darf es **nur ein** Slide, Screencast oder Video geben. Diese Elemente sind die zentralen Anzeigeelemente der Szene.
