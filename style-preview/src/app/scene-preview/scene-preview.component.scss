@@ -32,4 +32,13 @@
   position: absolute;
 }
 
+.text{
+  display: flex;
+  flex-direction: column;
+
+  ul, li, p {
+    position: static;
+  }
+}
+
 

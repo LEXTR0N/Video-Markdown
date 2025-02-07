@@ -1,9 +1,8 @@
-// src/app/app.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScenePreviewComponent } from './scene-preview/scene-preview.component';
 
-type SceneType = 'title' | 'slide' | 'screencast' | 'speaker';
+type SceneType = 'title' | 'slide' | 'slidewithcode' | 'screencast' | 'speaker';
 
 @Component({
   selector: 'app-root',
@@ -27,4 +26,5 @@ export class AppComponent implements OnInit {
     this.selectedSceneType = scene;
     localStorage.setItem('selectedSceneType', scene);
   }
+  
 }

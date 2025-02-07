@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./scene-preview.component.scss']
 })
 export class ScenePreviewComponent {
-  @Input() sceneType: 'title' | 'slide' | 'screencast' | 'speaker' = 'title';
+  @Input() sceneType: 'title' | 'slide' | 'slidewithcode' | 'screencast' | 'speaker' = 'title';
 
 
 }
