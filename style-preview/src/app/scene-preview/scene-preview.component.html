@@ -1,22 +1,36 @@
-<!-- src/app/scene-preview/scene-preview.component.html -->
-<div class="scene-container" [ngSwitch]="sceneType">
-    <div *ngSwitchCase="'title'" class="scene-element scene-title">
-      <p>Title Scene</p>
+<div class="video" [ngSwitch]="sceneType">
+  <!-- 1. Title-Szene: Title, Author, Logo -->
+  <div *ngSwitchCase="'title'" class="scene-element title-scene">
+    <div class="title">Hier steht Ihr Titel</div>
+    <div class="author">Prof. Dr. Hier steht Ihr Autor</div>
+    <div class="logo"></div>
+  </div>
+
+  <!-- 2. Slide-Szene: Title, Text, Speaker -->
+  <div *ngSwitchCase="'slide'" class="scene-element slide-scene">
+    <div class="title">Slide Title</div>
+    <div class="text">
+      <p>Slide Text</p>
+      <p>Slide Text</p>
+      <p>Slide Text</p>
+      <img class="speaker" src="app/image/person.png" alt="Person" />
     </div>
-    <div *ngSwitchCase="'slide'" class="scene-element scene-slide">
-      <p>Slide Scene</p>
-    </div>
-    <div *ngSwitchCase="'screencast'" class="scene-element scene-screencast">
-      <p>Screencast Scene</p>
-    </div>
-    <div *ngSwitchCase="'speaker'" class="scene-element scene-speaker">
-      <p>Speaker Scene</p>
-    </div>
-    <div *ngSwitchDefault class="scene-element">
-      <p>Bitte wähle einen Scenentyp.</p>
-    </div>
-    
-    <!-- Farbiges Element aus assets/style.scss -->
-    <div class="my-colored-element"></div>
+
+  </div>
+
+  <!-- 3. Screencast-Szene: Noch unbekannt, Platzhalter -->
+  <div *ngSwitchCase="'screencast'" class="scene-element screencast-scene">
+    <p>Screencast Scene (Placeholder)</p>
+  </div>
+
+  <!-- 4. Speaker-Szene: Speaker -->
+  <div *ngSwitchCase="'speaker'" class="scene-element speaker-scene">
+    <div class="speaker">Speaker</div>
+  </div>
+
+  <!-- Default-Fall, falls kein gültiger Scenentyp gewählt wurde -->
+  <div *ngSwitchDefault class="scene-element">
+    <p>Bitte wähle einen Scenentyp.</p>
   </div>
   
+</div>

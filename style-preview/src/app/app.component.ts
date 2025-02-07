@@ -1,7 +1,9 @@
 // src/app/app.component.ts
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScenePreviewComponent } from './scene-preview/scene-preview.component';
+
+type SceneType = 'title' | 'slide' | 'screencast' | 'speaker';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +12,19 @@ import { ScenePreviewComponent } from './scene-preview/scene-preview.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  // Aktueller Scenentyp für die Vorschau
-  selectedSceneType: 'title' | 'slide' | 'screencast' | 'speaker' = 'title';
+export class AppComponent implements OnInit {
+  selectedSceneType: SceneType = 'title';
 
-  // Wechsel der Scene per Klick
-  changeScene(scene: 'title' | 'slide' | 'screencast' | 'speaker'): void {
+  ngOnInit(): void {
+    // Lade den Zustand, falls vorhanden
+    const storedScene = localStorage.getItem('selectedSceneType') as SceneType | null;
+    if (storedScene) {
+      this.selectedSceneType = storedScene;
+    }
+  }
+
+  changeScene(scene: SceneType): void {
     this.selectedSceneType = scene;
+    localStorage.setItem('selectedSceneType', scene);
   }
 }
