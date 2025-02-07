@@ -1,20 +1,8 @@
 /* src/assets/styles.scss */
-.my-colored-element {
-  background-color: #ff5722; /* Kräftiges Orange */
-  position: absolute;
-  top: 10%;    /* 10% vom oberen Rand des Containers */
-  left: 10%;   /* 10% vom linken Rand */
-  width: 20%;  /* 20% der Containerbreite */
-  aspect-ratio: 1; /* Bleibt quadratisch */
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
 
 
 
 
-
-/* Beispiele für spezifische Szenen-Stile */
 /* Title */
 .title-scene {
   background-color: rgb(255, 255, 255);
