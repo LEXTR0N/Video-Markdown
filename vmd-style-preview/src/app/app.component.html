@@ -1,0 +1,16 @@
+<!-- src/app/app.component.html -->
+  <header class="app-header">
+    <h1>Video Style Preview</h1>
+  </header>
+  
+
+  <!-- Auswahl der Szene (Material Design Buttons) -->
+  <div class="scene-selector">
+    <button class="mat-button" (click)="changeScene('title')">Title</button>
+    <button class="mat-button" (click)="changeScene('slide')">Slide</button>
+    <button class="mat-button" (click)="changeScene('screencast')">Screencast</button>
+    <button class="mat-button" (click)="changeScene('speaker')">Speaker</button>
+  </div>
+
+  <!-- Vorschaubereich als Card (16:9) -->
+  <app-scene-preview [sceneType]="selectedSceneType"></app-scene-preview>

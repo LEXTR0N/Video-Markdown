@@ -1,0 +1,23 @@
+```gitignore
+# Node.js-Abhängigkeiten
+node_modules/
+
+# Build-Ausgaben
+dist/
+**/dist/
+
+# Log-Dateien
+*.log
+
+# TypeScript Build-Cache
+*.tsbuildinfo
+
+# Umgebungsdateien
+.env
+
+# Betriebssystem-spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# Skriptausgabe
+./projekt_gesamt.txt

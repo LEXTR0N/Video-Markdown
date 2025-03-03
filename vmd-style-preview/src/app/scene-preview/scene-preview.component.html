@@ -1,0 +1,45 @@
+<div class="video" [ngSwitch]="sceneType">
+  <!-- 1. Title-Szene: Title, Author, Logo -->
+  <div *ngSwitchCase="'title'" class="scene-element title-scene">
+    <div class="title">Hier steht Ihr Titel</div>
+    <div class="author">Prof. Dr. Hier steht Ihr Autor</div>
+    <div class="logo"></div>
+  </div>
+
+<!-- 2. Slide-Szene: Title, Text, Speaker -->
+<div *ngSwitchCase="'slide'" class="scene-element slide-scene">
+  <div class="title">Slide Title</div>
+  <div class="text">
+    <ul class="enumeration">
+      <li>First bullet point</li>
+      <li>Second bullet point</li>
+      <br>
+      <li>Third bullet point</li>
+      <li>Fourth bullet point</li>
+    </ul>
+    <p class="textblock">
+      This sample text provides additional context and outlines key points succinctly. It is designed to scale with the layout, ensuring readability on all devices. Replace this placeholder text with your own content as needed.
+    </p>      
+  </div>
+  <img class="speaker" src="app/image/person.png" alt="Person" />
+  <div class="button">Button</div>
+</div>
+
+
+  <!-- 3. Screencast-Szene: Noch unbekannt, Platzhalter -->
+  <div *ngSwitchCase="'screencast'" class="scene-element screencast-scene">
+    <img class="screencast" src="app/image/screencast.png" alt="Screencast" />
+    <img class="speaker" src="app/image/person.png" alt="Person" />
+  </div>
+
+  <!-- 4. Speaker-Szene: Speaker -->
+  <div *ngSwitchCase="'speaker'" class="scene-element speaker-scene">
+    <img class="speaker" src="app/image/person.png" alt="Person" />
+  </div>
+
+  <!-- Default-Fall, falls kein gültiger Scenentyp gewählt wurde -->
+  <div *ngSwitchDefault class="scene-element">
+    <p>Bitte wähle einen Scenentyp.</p>
+  </div>
+  
+</div>

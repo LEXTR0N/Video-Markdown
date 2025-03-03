@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Globale Basis-Styles für den gesamten Browser */
+html {
+  background-color: rgb(236, 235, 235);  // Light Mode Hintergrund
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Standardwerte (Light Mode) als CSS-Variablen */
+:root {
+  --primary-color: #000000;
+  --button-bg: #fff;
+  --button-hover: rgba(94, 132, 202, 0.5);
+  --container-bg: #f5f5f5;
+  --button-color: #000;
+}
+
+/* Dark Mode Einstellungen */
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #222;  // Dunkler Hintergrund für den HTML-Tag
+    color: #eee;             // Helle Schriftfarbe im Dark Mode
+  }
+  
+  :root {
+    --primary-color: #ffffff;  // Zum Beispiel ein rötlicher Farbton
+    --button-bg: #898989;
+    --button-hover: rgba(94, 132, 202, 0.7);
+    --container-bg: #121212;
+    --button-color: #fff;
+  }
+}
+
+/* Globale Styles für deine App */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 0vh;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: var(--container-bg);
+}
+
+.app-header {
+  margin-bottom: 20px;
+  
+  h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0;
+  }
+}
+
+.scene-selector {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  
+  .mat-button {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: var(--button-hover);
+    }
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--button-hover);
+    }
+  }
+}

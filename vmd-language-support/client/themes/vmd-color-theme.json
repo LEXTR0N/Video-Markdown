@@ -1,0 +1,106 @@
+{
+    "name": "VMD Theme",
+    "type": "dark",
+    "colors": {},
+    "tokenColors": [
+      {
+        "scope": [
+          "punctuation.definition.frontmatter.delimiter.vmd",
+          "punctuation.definition.heading.vmd",
+          "keyword.control.scene.vmd",
+          "keyword.control.slide.vmd",
+          "keyword.control.teleprompt.vmd",
+          "keyword.control.screencast.vmd",
+          "keyword.control.video.vmd",
+          "keyword.control.quiz.vmd",
+          "keyword.control.button.vmd",
+          "keyword.control.image.vmd",
+          "keyword.control.column.vmd",
+          "keyword.control.code.vmd"
+        ],
+        "settings": {
+          "foreground": "#569CD6",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": [
+          "entity.name.tag.attribute.vmd"
+        ],
+        "settings": {
+          "foreground": "#9CDCFE",
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "string.quoted.double.vmd",
+          "string.unquoted.quiz-answer.vmd"
+        ],
+        "settings": {
+          "foreground": "#CE9178"
+        }
+      },
+      {
+        "scope": [
+          "comment.block.vmd",
+          "comment.line.double-slash.vmd"
+        ],
+        "settings": {
+          "foreground": "#6A9955",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "constant.numeric.vmd"
+        ],
+        "settings": {
+          "foreground": "#4FC1FF"
+        }
+      },
+      {
+        "scope": [
+          "entity.name.function.interactive-command.vmd"
+        ],
+        "settings": {
+          "foreground": "#C586C0"
+        }
+      },
+      {
+        "scope": [
+          "markup.bold.vmd"
+        ],
+        "settings": {
+          "foreground": "#FFFFFF",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": [
+          "markup.italic.vmd"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "markup.inline.raw.vmd"
+        ],
+        "settings": {
+          "foreground": "#D4D4D4",
+          "background": "#1E1E1E"
+        }
+      },
+      {
+        "scope": [
+          "markup.list.vmd"
+        ],
+        "settings": {
+          "foreground": "#D4D4D4"
+        }
+      }
+    ],
+    "semanticHighlighting": true
+  }

@@ -1,0 +1,151 @@
+/* src/assets/styles.scss */
+
+
+
+/* Title */
+.title-scene {
+  background-color: rgb(255, 255, 255);
+
+  .title{
+    top: 20%;
+    left: 50%;
+    width: 90%;
+    height: 15%;
+    background-color: rgba(5,49,105,255);
+    transform: translateX(-50%);
+    margin: 20, 20, 50, 50;
+    border-radius: 10px;
+    /* Text */
+    display: flex;           // Aktiviert Flexbox
+    justify-content: center; // Zentriert den Inhalt horizontal
+    align-items: center;     // Zentriert den Inhalt vertikal
+    font-size: 3vw;
+    color: white;
+  }
+
+  .author {
+    top: 37%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 15%;
+    border-radius: 10px;
+    /* Text */
+    display: flex;           // Aktiviert Flexbox
+    justify-content: center; // Zentriert den Inhalt horizontal
+    align-items: center;     // Zentriert den Inhalt vertikal
+    font-size: 1.7vw;
+    color: black;
+  }
+
+  .logo {
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;        
+    height: 50%;       // Feste Höhe, damit das Background Image angezeigt wird
+    background-image: url("../assets/thws_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.slide-scene {
+  background-color: rgb(255, 255, 255);
+
+  .title {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(5,49,105,255);
+    /* Text */
+    display: flex;           // Aktiviert Flexbox
+    justify-content: flex-start; // Zentriert den Inhalt horizontal
+    align-items: center;     // Zentriert den Inhalt vertikal
+    padding-left: 2%;
+    font-size: 2vw;
+    color: white;
+  }
+
+  .text {
+    top: 10%;
+    left: 5%;
+    width: 60%;
+    height: 90%;
+    gap: 1em; // Abstand zwischen den einzelnen Elementen
+    font-size: 1.5vw;
+    color: black;
+    justify-content: center;
+
+    .enumeration {
+      list-style: square;  // oder eine andere Art von Aufzählungszeichen
+      padding-left: 1em;
+      margin: 0 0 1em 0;
+    
+      li::marker {
+        font-size: 1.5em;
+        color: rgba(5,49,105,255);
+      }
+    }
+    
+    .textblock {
+      margin: 0;
+    }
+  }
+
+  .speaker {
+    bottom: 0%;
+    right: 0%;
+    width: 35%;
+    height: auto;
+    display: block;   // Entfernt eventuelle Inline-Abstände
+    object-fit: cover; // Optional: Falls das Bild den Container vollständig ausfüllen soll
+  }
+
+  .button {
+    bottom: 10%;
+    left: 20%;
+    padding: 1% 5%;
+    background-color: rgba(247,116,0,255);
+    border: 0.4vh solid black;
+    /* Text */
+    display: flex;           // Aktiviert Flexbox
+    justify-content: center; // Zentriert den Inhalt horizontal
+    align-items: center;     // Zentriert den Inhalt vertikal
+    font-size: 1.9vw;
+    color: white;
+  }
+
+}
+
+.screencast-scene {
+  .screencast{
+    width: 100%;
+    height: 100%;
+  }
+
+  .speaker {
+    bottom: -20%;
+    right: 0%;
+    width: 35%;
+    height: auto;
+    display: block;   // Entfernt eventuelle Inline-Abstände
+    object-fit: cover; // Optional: Falls das Bild den Container vollständig ausfüllen soll
+  }
+}
+
+
+.speaker-scene {
+  background-color: rgb(255, 255, 255);
+
+
+  .speaker {
+    height: 100%;
+    display: block;   // Entfernt eventuelle Inline-Abstände
+    object-fit: cover; // Optional: Falls das Bild den Container vollständig ausfüllen soll
+  }
+}
+
+

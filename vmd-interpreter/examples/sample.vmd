@@ -1,0 +1,91 @@
+---
+title = "Introduction to Programming"
+author = "Jonas"
+---
+
+# Scene: Welcome to Programming
+
+## Slide (title="Welcome to Programming")
+- Programming is the process of creating instructions for computers
+- Learning to code helps develop logical thinking
+- We'll cover basic programming concepts in this course
+- No prior experience required!
+
+## Teleprompt (title="Introduction")
+Welcome to this introduction to programming! In this short course, we'll cover the fundamental 
+concepts that you need to understand how programming works. Don't worry if you have no prior 
+experience - we'll start from the very beginning. Programming helps develop logical thinking 
+and problem-solving skills that are valuable in many fields.
+
+
+# Scene: What is a Program?
+
+## Slide (title="What is a Program?")
+- A program is a set of instructions for a computer
+- Programs are written in programming languages
+- Programs solve specific problems or perform tasks
+- Examples: web browsers, video games, mobile apps
+
+### Button (name="learnMore", label="Learn More", action="https://example.com/programming")
+
+## Teleprompt (title="Program Definition")
+Let's start by understanding what a program actually is. At its core, a program is simply a set 
+of instructions that tells a computer what to do. These instructions are written in special 
+languages called programming languages, which have their own syntax and rules. Programs can range 
+from simple utilities that perform basic calculations to complex applications like web browsers, 
+video games, and mobile apps. [!show:learnMore] If you want to learn more after this video, 
+check out the resources on our website.
+
+
+# Scene: Your First Program
+
+## Slide (title="Hello, World!")
+- The traditional first program in any language
+- Displays the text "Hello, World!" on the screen
+- Simple but demonstrates basic program structure
+- Let's see what it looks like in Python
+
+### Code (snippet="helloWorld")
+
+## Teleprompt (title="First Program")
+Now, let's look at your first program. Traditionally, the first program you write in any 
+language is called "Hello, World!" - it simply displays this greeting on the screen. While 
+it's a very simple program, it demonstrates the basic structure needed to create a working 
+program. Here's what it looks like in Python, one of the most popular programming languages 
+for beginners. Notice how the code in line [!line:helloWorld-main] produces the output that 
+appears on your screen.
+
+
+# Scene: Quiz Time
+
+## Slide (title="Let's Test Your Knowledge")
+- Time for a quick quiz
+- Answer the following question
+
+## Quiz (name="basicQuiz", title="Programming Basics")
+
+### What is a program?
+- A type of computer hardware
++ A set of instructions for a computer
+- A network of computers
+- A programming language
+
+## Teleprompt (title="Quiz Introduction")
+Now, let's test your understanding with a quick quiz. [!quiz:basicQuiz] Take a moment to 
+think about this question about programming basics.
+
+
+# Scene: Conclusion
+
+## Slide (title="Next Steps")
+- We've covered the very basics of programming
+- Next, we'll learn about variables and data types
+- Practice writing your own "Hello, World!" program
+- Remember: learning to code takes practice!
+
+## Teleprompt (title="Conclusion")
+That concludes our brief introduction to programming. We've covered the very basics of what 
+programming is and looked at a simple example. In our next session, we'll dive deeper into 
+variables and data types, which are fundamental building blocks of any program. Before then, 
+I encourage you to practice writing your own "Hello, World!" program. Remember, learning to 
+code is like learning any new skill - it takes practice and patience. See you next time!

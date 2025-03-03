@@ -1,0 +1,44 @@
+@use '../../../assets/styles.scss' as *;  // Bindet Inhalte aus assets/styles.scss ein
+
+.video {
+  /* Der Container passt sich an die Bildschirmgröße an und behält immer das 16:9-Verhältnis.
+     Hier wird 80vw bzw. 80vh als Maximalwerte verwendet. */
+     width: min(80vw, calc(80vh * (16 / 9)));
+     height: min(80vh, calc(80vw * (9 / 16)));
+     aspect-ratio: 16 / 9;
+     margin: auto;
+     border: 2px solid #000;
+     border-radius: 4px;
+     overflow: hidden;
+     position: relative;
+     font-size: 1vmin;  // Basis-Schriftgröße – passt sich mit der Größe des Containers an
+}
+
+.scene-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column; /* Damit mehrere untergeordnete Elemente untereinander stehen können */
+  justify-content: center;
+  align-items: center;
+}
+
+.scene-element *{
+  position: absolute;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+
+  ul, li, p {
+    position: static;
+  }
+}
+
+

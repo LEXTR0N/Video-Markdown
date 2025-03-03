@@ -1,0 +1,123 @@
+\ProvidesPackage{thwsbeamertheme}
+
+\RequirePackage{hyperref}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{listings}
+\RequirePackage{graphicx}
+\RequirePackage{ulem}
+\RequirePackage{accsupp}
+\RequirePackage[sfdefault]{roboto}
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Farbschema der THWS
+\definecolor{thwsorange}{rgb}{0.925,0.435,0.020} 
+\definecolor{thwsblue}{rgb}{0.092,0.235,0.412} 
+\definecolor{thwsgrey}{rgb}{0.735,0.735,0.735} 
+
+% Standardfarben setzen
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{palette primary}{fg=black,bg=white}
+
+% Titelseite
+\setbeamertemplate{title page}{
+    \begin{tikzpicture}[remember picture,overlay]
+        % Blauer Hintergrund über die ganze Folie
+        \fill[thwsblue] (current page.south west) rectangle (current page.north east);
+
+        % Hochschul-Logo links oben
+        \node[anchor=north west] at (current page.north west) {
+            \includegraphics[height=1.0cm]{thws-logo_horiz_de_white.png}
+        };
+    \end{tikzpicture}
+
+    % Titel und Autor in der Mitte in Weiß
+    \vspace{1cm}
+    \begin{center}
+        {\LARGE\textbf{\textcolor{white}{\MakeUppercase{\inserttitle}}}} \\[1cm]
+        {\Large \textcolor{white}{\insertauthor}}
+    \end{center}
+}
+
+% Frametitel mit Logo links
+\setbeamertemplate{frametitle}{
+    \nointerlineskip
+    \begin{minipage}{\textwidth} 
+        \hspace{-28pt} % Logo weiter nach links verschieben
+        \includegraphics[height=1.3cm]{thws-logo_vert_de_orange-rgb.png} 
+        \hfill 
+        \raisebox{16pt}{\usebeamercolor[black]{frametitle} \Large \textbf{\MakeUppercase{\insertframetitle}}}  
+    \end{minipage}
+}
+
+% Inhaltsfolien-Vorlage
+\newenvironment{contentsframe}[1] 
+{
+    \begin{frame}[containsverbatim]
+    \frametitle{#1}
+    \begin{columns}
+        \begin{column}{0.7\textwidth} 
+}
+{
+        \end{column}
+        \begin{column}{0.3\textwidth} 
+        \end{column}
+    \end{columns}
+    \end{frame}
+}
+
+% Inhaltsfolie mit Aufzählung
+\newenvironment{itemframe}[1] 
+{
+    \begin{frame}[containsverbatim]
+    \frametitle{#1}
+    \begin{columns}
+        \begin{column}{0.7\textwidth} 
+        \begin{itemize}
+}
+{
+        \end{itemize}
+        \end{column}
+        \begin{column}{0.3\textwidth} 
+        \end{column}
+    \end{columns}
+    \end{frame}
+}
+% Fullscreen-Modus
+\newenvironment{fullframe}[1] 
+{
+    \begin{frame}[containsverbatim]
+    \frametitle{#1}
+}
+{
+    \end{frame}
+}
+
+% Kopf- und Fußzeilen deaktivieren
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+
+% Aufzählungspunkte anpassen (blaues Quadrat)
+\setbeamertemplate{itemize item}{\color{thwsblue}$\blacksquare$}
+
+% Code-Umgebungen für XML & Java
+\lstnewenvironment{xml}{%
+  \lstset{numbers=left,numberstyle=\tiny,numbersep=6pt,%
+          language=xml,frame=lines,xleftmargin=2em,basicstyle=\scriptsize,%
+          columns=fullflexible,escapechar=\§,showstringspaces=false,breaklines=true,inputencoding=latin1}}{}
+
+\lstnewenvironment{java}{%
+  \lstset{numbers=left,numberstyle=\tiny,numbersep=6pt,%
+          language=Java,frame=lines,xleftmargin=2em,basicstyle=\scriptsize,%
+          literate={~} {$\sim$}{1},%
+          columns=fullflexible,showstringspaces=false,breaklines=true,inputencoding=latin1}}{}
+
+% Listennummern für Barrierefreiheit
+\renewcommand{\thelstnumber}{
+  \protect\BeginAccSupp{ActualText={}}\arabic{lstnumber}\protect\EndAccSupp{}%
+}
+
+\newcommand{\vspacedef}{\vspace{5mm}}

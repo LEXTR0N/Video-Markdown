@@ -1,0 +1,92 @@
+{
+  "name": "vmd-language-support",
+  "version": "1.0.0",
+  "main": "./client/dist/extension.js",
+  "description": "Language support for Video Markdown (VMD) with customized syntax highlighting",
+  "displayName": "VMD Language Support",
+  "publisher": "Your-Publisher-Name",
+  "scripts": {
+    "compile:client": "tsc -p client/tsconfig.json",
+    "compile:server": "tsc -p server/tsconfig.json",
+    "compile": "concurrently \"npm:compile:client\" \"npm:compile:server\"",
+    "watch": "concurrently \"tsc -w -p client/tsconfig.json\" \"tsc -w -p server/tsconfig.json\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.7.3",
+    "vscode-languageclient": "^8.1.0",
+    "vscode-languageserver": "^8.1.0",
+    "vscode-languageserver-textdocument": "^1.0.8",
+    "@types/vscode": "^1.89.0",
+    "@types/node": "^18.0.0"
+  },
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "activationEvents": [
+    "workspaceContains:**/*.vmd",
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "vmd",
+        "aliases": [
+          "VMD",
+          "Video Markdown"
+        ],
+        "extensions": [
+          ".vmd"
+        ],
+        "icon": {
+          "light": "./icons/vmd-light.png",
+          "dark": "./icons/vmd-dark.png"
+        },
+        "configuration": "./client/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vmd",
+        "scopeName": "source.vmd",
+        "path": "./client/syntaxes/vmd.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "vmd.openDocumentation",
+        "title": "VMD: Open Documentation"
+      },
+      {
+        "command": "vmd.openPreview",
+        "title": "VMD: Open Preview"
+      },
+      {
+        "command": "vmd.exportToHtml",
+        "title": "VMD: Export to HTML"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorLangId == vmd",
+          "command": "vmd.openPreview",
+          "group": "navigation"
+        },
+        {
+          "when": "editorLangId == vmd",
+          "command": "vmd.exportToHtml",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "vmd.openPreview",
+        "key": "ctrl+shift+v",
+        "mac": "cmd+shift+v",
+        "when": "editorLangId == vmd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+---
+title = "Introduction to Video Markdown"
+author = "John Doe"
+style = "thws.css" 
+---
+/* Style file is optional unless you have a custom template/design */
+/* 
+The YAML header (or front matter) above defines metadata for the entire video:
+- title: The title of the video
+- author: Creator's name
+- style: References a CSS file for styling (optional - only needed for custom templates)
+*/
+
+# Scene: Welcome to Video Markdown
+
+/* 
+Scenes are the top-level containers in VMD.
+Each scene must contain exactly ONE primary content element:
+- Slide OR
+- Video OR
+- Screencast
+*/
+
+## Slide (title="Welcome to Video Markdown", lang="EN")
+/* 
+A slide element displays static content.
+Attributes:
+- title: Title displayed at the top of the slide
+- lang: Language code (used for multilingual content)
+
+Note: If you use lang attributes in one slide/teleprompt,
+you must use them consistently throughout the entire project!
+*/
+
+- Video Markdown makes creating educational videos easy
+- Use a simple text-based format to define your content
+- Add interactive elements like buttons and quizzes
+- Support for multiple languages
+
+/* 
+Bullet points are created with the "-" symbol.
+They'll appear as a list in your rendered slide.
+*/
+
+## Teleprompt (title="Welcome", lang="EN")
+/* 
+Teleprompts contain the narration script that should be read during the scene.
+This text doesn't appear on the slide but is used by the presenter.
+*/
+
+Welcome to this introduction to Video Markdown! In this short tutorial, I'll show you 
+how this simple text-based format can make creating educational videos much easier. 
+Video Markdown, or VMD, allows you to define your content, add interactive elements,
+and even support multiple languages - all in a single text file.
+
+
+# Scene: Key Components
+
+## Slide (title="Key Components of VMD", lang="EN")
+### Column (width=50)
+/* 
+The Column element creates a layout Column.
+The width attribute specifies the percentage width.
+*/
+
+- **Scenes**: Top-level containers
+- **Slides**: Visual content with text and images
+- **Teleprompts**: Narration scripts
+
+### Column (width=50)
+- **Buttons**: Interactive navigation
+- **Quizzes**: Knowledge testing
+- **Code Snippets**: Technical demonstrations
+
+### Button (name="learnMore", label="Learn More", action="scene: Interactive Elements") 
+/* 
+A button element creates an interactive button.
+Attributes:
+- name: Unique identifier for this button
+- label: Text displayed on the button
+- action: What happens when clicked (here, navigation to another scene)
+*/
+
+## Teleprompt (title="Key Components", lang="EN")
+Now let's look at the key components of VMD. Scenes are your top-level containers,
+grouping related content together. Slides contain the visual content that viewers will see,
+while teleprompts hold the narration script. 
+
+VMD also supports interactive elements like buttons for navigation, quizzes to test knowledge,
+and code snippets for technical demonstrations. [!show:learnMore] Notice the button that just appeared?
+You can click it to navigate to another scene. This demonstrates how VMD supports interactive elements.
+
+
+# Scene: Interactive Elements
+
+## Slide (title="Interactive Elements", lang="EN")
+[!bullet0] - Buttons can trigger navigation or other actions
+[!bullet1] - Quizzes help test viewer understanding
+[!bullet2] - Code snippets show programming examples
+
+/* 
+[!bulletX] markers create bullets that can be shown/hidden with commands.
+*/
+
+### Code (snippet="greetingFunction")
+/* 
+The Code element references a code snippet.
+The actual code content will be automatically inserted from external files
+or predefined snippets in your project.
+
+The snippet attribute gives it a name that can be referenced elsewhere.
+*/
+
+## Teleprompt (title="Interactive Elements", lang="EN")
+Let's explore some of the interactive elements available in VMD. [!show:bullet0] First, 
+we have buttons, which can trigger navigation between scenes or other actions.
+
+[!show:bullet1] Next, we have quizzes, which are great for testing viewer understanding 
+and making your videos more engaging.
+
+[!show:bullet2] And finally, we have code snippets, which are perfect for demonstrating 
+programming concepts. Let me show you an example:
+
+In line [!line:greetingFunction-start], we define a simple JavaScript function that greets a user.
+And in line [!line:greetingFunction-return], we return the greeting. This is a simple example,
+but you can include code in any programming language.
+
+
+# Scene: Knowledge Check
+
+## Slide (title="Knowledge Check", lang="EN")
+- Let's test your knowledge about VMD
+- Answer the following questions
+
+## Quiz (name="basicQuiz", title="Test Your VMD Knowledge")
+/* 
+The Quiz element creates an interactive quiz.
+Questions are defined with ### and options with + (correct) or - (incorrect).
+*/
+
+### What is the first element in a VMD file?
+- Comments
++ YAML header
+- Scene
+- Slide
+
+### Which symbol is used for correct quiz answers?
+- Minus (-)
++ Plus (+)
+- Asterisk (?)
+- Equal (=)
+
+## Teleprompt (title="Knowledge Check", lang="EN")
+Now, let's test your understanding with a quick quiz. [!quiz:basicQuiz] I'll give you a 
+moment to answer these questions about VMD.
+
+
+# Scene: Multi-language Support
+
+/* 
+Important: If you start using multiple languages in your project,
+you must maintain all content in all languages consistently throughout
+the entire project. All slides and teleprompts must have language attributes.
+*/
+
+## Slide (title="Multiple Languages Support", lang="EN")
+- Create content in multiple languages
+- Just specify the language code in elements
+- Perfect for international audiences
+
+## Teleprompt (title="Multi-language Support", lang="EN")
+VMD makes it easy to create content in multiple languages. By simply specifying the language
+code in your elements, you can maintain different versions of your content in the same file.
+This is perfect for reaching international audiences.
+
+
+# Scene: German Version
+
+## Slide (title="Unterstützung für mehrere Sprachen", lang="DE")
+- Erstellen Sie Inhalte in mehreren Sprachen
+- Geben Sie einfach den Sprachcode in den Elementen an
+- Perfekt für internationales Publikum
+
+## Teleprompt (title="Mehrsprachige Unterstützung", lang="DE")
+VMD macht es einfach, Inhalte in mehreren Sprachen zu erstellen. Indem Sie einfach den
+Sprachcode in Ihren Elementen angeben, können Sie verschiedene Versionen Ihres Inhalts
+in derselben Datei pflegen. Dies ist perfekt, um internationale Zielgruppen zu erreichen.
+
+
+# Scene: Media Integration
+
+## Slide (title="Media Integration", lang="EN")
+- Include images, videos, and screencasts
+- Reference external media files
+- Perfect for demonstrations
+
+### Image (source="example_image.png")
+/* 
+The Image element displays an image.
+The source attribute points to an image file.
+*/
+
+## Teleprompt (title="Media Integration", lang="EN")
+VMD also makes it easy to integrate various media types. You can include images
+for visual references. In separate scenes, you can also add videos for pre-recorded 
+content, and screencasts for software demonstrations. Remember that each scene can only
+have one primary content type (Slide, Video, or Screencast).
+
+
+# Scene: Video Example
+
+## Video (source="example_video.mp4")
+/* 
+The Video element includes a video file.
+The source attribute points to a video file.
+Note: A scene can only contain ONE primary content element,
+so this scene has Video instead of Slide.
+*/
+
+## Teleprompt (title="Video Example", lang="EN")
+This is an example of a scene with a Video element. Notice that there's no Slide
+element in this scene - each scene must contain exactly one primary content type.
+
+
+# Scene: Screencast Example
+
+## Screencast (source="example_screencast.mp4")
+/* 
+The Screencast element is used for software demonstrations.
+Like Video, it's a primary content element, so a scene with a Screencast
+cannot also have a Slide or Video element.
+*/
+
+## Teleprompt (title="Screencast Example", lang="EN")
+This is an example of a scene with a Screencast element, which is perfect for
+software demonstrations. Again, note that there's no Slide element in this scene.
+
+
+# Scene: Conclusion
+
+## Slide (title="Start Using VMD Today!", lang="EN")
+- Simple, text-based format
+- Rich interactive features
+- Multi-language support
+- Perfect for educational content
+
+### Button (name="startButton", label="Get Started", action="https://github.com/your-repo/vmd") 
+/* 
+Buttons can also link to external URLs.
+*/
+
+## Teleprompt (title="Conclusion", lang="EN")
+In conclusion, Video Markdown provides a powerful yet simple way to create educational
+videos. With its text-based format, rich interactive features, and multi-language support,
+it's perfect for educators, trainers, and content creators. [!show:startButton] Ready to 
+get started? Click the button to visit our repository and learn more about VMD. Thank you
+for following along with this introduction!
