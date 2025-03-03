@@ -53,8 +53,7 @@ This extension provides comprehensive language support for Video Markdown (VMD),
 
 ## Installation
 
-- Install directly from the VS Code Extension Marketplace
-- Or download the `.vsix` file from the [GitHub repository](https://github.com/LEXTR0N/Video-Markdown.git)
+Download the `.vsix` file from the [GitHub repository](https://github.com/LEXTR0N/Video-Markdown.git)
 
 ## Requirements
 

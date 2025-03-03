@@ -4,7 +4,9 @@
   "main": "./client/dist/extension.js",
   "description": "Language support for Video Markdown (VMD) with customized syntax highlighting",
   "displayName": "VMD Language Support",
-  "publisher": "Your-Publisher-Name",
+  "publisher": "Lextron",
+  "categories": ["domain-specific language", "Linters"],
+  "keywords": ["vmd", "video markdown", "markdown", "language server"],
   "scripts": {
     "compile:client": "tsc -p client/tsconfig.json",
     "compile:server": "tsc -p server/tsconfig.json",
@@ -12,16 +14,16 @@
     "watch": "concurrently \"tsc -w -p client/tsconfig.json\" \"tsc -w -p server/tsconfig.json\""
   },
   "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.89.0",
     "concurrently": "^8.2.2",
     "typescript": "^5.7.3",
     "vscode-languageclient": "^8.1.0",
     "vscode-languageserver": "^8.1.0",
-    "vscode-languageserver-textdocument": "^1.0.8",
-    "@types/vscode": "^1.89.0",
-    "@types/node": "^18.0.0"
+    "vscode-languageserver-textdocument": "^1.0.8"
   },
   "engines": {
-    "vscode": "^1.78.0"
+    "vscode": "^1.89.0"
   },
   "activationEvents": [
     "workspaceContains:**/*.vmd",
