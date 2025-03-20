@@ -31,7 +31,7 @@ A DSL interpreter that can parse VMD files and generate LaTeX slides in Beamer s
 
 **Key Features:**
 - YAML header and scene parsing
-- Slide rendering with Markdown to LaTeX conversion
+- Slide rendering with Video Markdown to LaTeX conversion
 - Multi-language support
 - Support for various elements (slides, teleprompts, buttons, code snippets)
 
